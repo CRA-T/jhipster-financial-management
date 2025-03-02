@@ -1,0 +1,9 @@
+{
+  "jhipsterFinancialManagementApp": {
+    "GenderEnum": {
+      "null": "",
+      "MALE": "MALE",
+      "FEMALE": "FEMALE"
+    }
+  }
+}

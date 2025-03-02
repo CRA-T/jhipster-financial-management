@@ -1,0 +1,9 @@
+{
+  "jhipsterFinancialManagementApp": {
+    "FamilySituationEnum": {
+      "null": "",
+      "CELIBATAIRE": "CELIBATAIRE",
+      "MARIE": "MARIE"
+    }
+  }
+}
