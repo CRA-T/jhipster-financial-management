@@ -50,6 +50,33 @@ public class CacheConfiguration {
             createCache(cm, com.crat.budget.domain.User.class.getName());
             createCache(cm, com.crat.budget.domain.Authority.class.getName());
             createCache(cm, com.crat.budget.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.crat.budget.domain.AppUser.class.getName());
+            createCache(cm, com.crat.budget.domain.FinancialYear.class.getName());
+            createCache(cm, com.crat.budget.domain.SubTitle.class.getName());
+            createCache(cm, com.crat.budget.domain.SubTitle.class.getName() + ".chapters");
+            createCache(cm, com.crat.budget.domain.Chapter.class.getName());
+            createCache(cm, com.crat.budget.domain.Chapter.class.getName() + ".articles");
+            createCache(cm, com.crat.budget.domain.Article.class.getName());
+            createCache(cm, com.crat.budget.domain.Article.class.getName() + ".recipes");
+            createCache(cm, com.crat.budget.domain.Article.class.getName() + ".expenses");
+            createCache(cm, com.crat.budget.domain.Recipe.class.getName());
+            createCache(cm, com.crat.budget.domain.Recipe.class.getName() + ".articles");
+            createCache(cm, com.crat.budget.domain.Expense.class.getName());
+            createCache(cm, com.crat.budget.domain.Expense.class.getName() + ".articles");
+            createCache(cm, com.crat.budget.domain.AnnexDecision.class.getName());
+            createCache(cm, com.crat.budget.domain.AnnexDecision.class.getName() + ".purchaseOrders");
+            createCache(cm, com.crat.budget.domain.AnnexDecision.class.getName() + ".decisions");
+            createCache(cm, com.crat.budget.domain.Supplier.class.getName());
+            createCache(cm, com.crat.budget.domain.Supplier.class.getName() + ".purchaseOrders");
+            createCache(cm, com.crat.budget.domain.PurchaseOrder.class.getName());
+            createCache(cm, com.crat.budget.domain.PurchaseOrder.class.getName() + ".purchaseOrderItems");
+            createCache(cm, com.crat.budget.domain.PurchaseOrderItem.class.getName());
+            createCache(cm, com.crat.budget.domain.Decision.class.getName());
+            createCache(cm, com.crat.budget.domain.Decision.class.getName() + ".decisionItems");
+            createCache(cm, com.crat.budget.domain.DecisionItem.class.getName());
+            createCache(cm, com.crat.budget.domain.Engagement.class.getName());
+            createCache(cm, com.crat.budget.domain.Engagement.class.getName() + ".purchaseOrders");
+            createCache(cm, com.crat.budget.domain.Mandate.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

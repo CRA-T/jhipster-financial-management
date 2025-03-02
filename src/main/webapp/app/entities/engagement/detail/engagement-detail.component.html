@@ -1,0 +1,72 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    @if (engagement(); as engagementRef) {
+      <div>
+        <h2 data-cy="engagementDetailsHeading">
+          <span jhiTranslate="jhipsterFinancialManagementApp.engagement.detail.title">Engagement</span>
+        </h2>
+
+        <hr />
+
+        <jhi-alert-error></jhi-alert-error>
+
+        <jhi-alert></jhi-alert>
+
+        <dl class="row-md jh-entity-details">
+          <dt><span jhiTranslate="global.field.id">ID</span></dt>
+          <dd>
+            <span>{{ engagementRef.id }}</span>
+          </dd>
+          <dt><span jhiTranslate="jhipsterFinancialManagementApp.engagement.engagementNumber">Engagement Number</span></dt>
+          <dd>
+            <span>{{ engagementRef.engagementNumber }}</span>
+          </dd>
+          <dt><span jhiTranslate="jhipsterFinancialManagementApp.engagement.engagementDate">Engagement Date</span></dt>
+          <dd>
+            <span>{{ engagementRef.engagementDate | formatMediumDatetime }}</span>
+          </dd>
+          <dt><span jhiTranslate="jhipsterFinancialManagementApp.engagement.objectOfExpense">Object Of Expense</span></dt>
+          <dd>
+            <span>{{ engagementRef.objectOfExpense }}</span>
+          </dd>
+          <dt><span jhiTranslate="jhipsterFinancialManagementApp.engagement.notifiedCredits">Notified Credits</span></dt>
+          <dd>
+            <span>{{ engagementRef.notifiedCredits }}</span>
+          </dd>
+          <dt><span jhiTranslate="jhipsterFinancialManagementApp.engagement.creditCommitted">Credit Committed</span></dt>
+          <dd>
+            <span>{{ engagementRef.creditCommitted }}</span>
+          </dd>
+          <dt><span jhiTranslate="jhipsterFinancialManagementApp.engagement.creditsAvailable">Credits Available</span></dt>
+          <dd>
+            <span>{{ engagementRef.creditsAvailable }}</span>
+          </dd>
+          <dt><span jhiTranslate="jhipsterFinancialManagementApp.engagement.amountProposedCommitment">Amount Proposed Commitment</span></dt>
+          <dd>
+            <span>{{ engagementRef.amountProposedCommitment }}</span>
+          </dd>
+          <dt><span jhiTranslate="jhipsterFinancialManagementApp.engagement.headDaf">Head Daf</span></dt>
+          <dd>
+            <span>{{ engagementRef.headDaf }}</span>
+          </dd>
+          <dt><span jhiTranslate="jhipsterFinancialManagementApp.engagement.financialController">Financial Controller</span></dt>
+          <dd>
+            <span>{{ engagementRef.financialController }}</span>
+          </dd>
+          <dt><span jhiTranslate="jhipsterFinancialManagementApp.engagement.generalManager">General Manager</span></dt>
+          <dd>
+            <span>{{ engagementRef.generalManager }}</span>
+          </dd>
+        </dl>
+
+        <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+          <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Retour</span>
+        </button>
+
+        <button type="button" [routerLink]="['/engagement', engagementRef.id, 'edit']" class="btn btn-primary">
+          <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Editer</span>
+        </button>
+      </div>
+    }
+  </div>
+</div>
